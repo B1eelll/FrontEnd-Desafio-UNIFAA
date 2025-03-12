@@ -1,0 +1,30 @@
+
+body{
+    background: linear-gradient(to left, blue, purple);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#login{
+    padding-top: 30px;
+    display: block;
+    width: 250px;
+    height: 300px;
+    align-items: center;
+    justify-items: center;
+    margin-top: 10%;
+    justify-self: center;
+    box-shadow: 7px 6px 8px black;
+    border: 3px solid rgb(175, 175, 175);
+    border-radius: 7px;
+}
+#user{
+    width: 90px;
+    height: 90px;
+}
+strong{
+    color: white;
+}
+input{
+    background-color: antiquewhite;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px black;
+}
