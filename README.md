@@ -11,3 +11,6 @@ Observações:
 
 * Dentro do arquivo **.env**  você pode alterar a aporta e se a api vai utilizar autenticação ou não.
 * Na pasta **http**, tem alguns exemplos de endpoints que tem disponivel na api. Esses endpoints podem ser executados por dentro do vscode caso vc instale o plugin **RestClient**
+  ---------------------------------------------------
+ALuno:
+Neste desafio, preciso conectar uma api com uma página e utilizar uma biblioteca de framework.
