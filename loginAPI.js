@@ -54,3 +54,4 @@ if (btnentrar) {
   btnentrar.addEventListener("mouseenter", entrar);
   btnentrar.addEventListener("mouseleave", sair);
 }
+
