@@ -15,7 +15,7 @@ function obterToken() {
 function obterUsuario() {
   return JSON.parse(localStorage.getItem("usuario"));
 }
-
+/*
 validarUsuarioAutenticado();
 
  function validarUsuarioAutenticado() {
@@ -36,8 +36,8 @@ function usuarioEstaAutenticado() {
   let token = obterToken();
 
   return token ? true : false; // Condicional ternario
-}
-
+}  
+*/
 function logout() {
   localStorage.removeItem("token");
   localStorage.removeItem("usuario");

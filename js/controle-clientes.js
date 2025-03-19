@@ -57,7 +57,7 @@ function obterClientes() {
     headers: {
       authorization: obterToken(),
     },
-  }) // Faz a requisição para a URL da API
+  }) // Faz a requisição para a UasRL da API
     .then((response) => response.json()) // Converte a resposta para JSON
     .then((clientes) => {
       // Quando a resposta estiver pronta, executa a função

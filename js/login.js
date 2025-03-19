@@ -47,6 +47,7 @@ function autenticar(email, senha){
     .catch(err => {
         console.error('Erro ao autenticar', err);
     });
+   
 
 
     // 2° se der certo, direcionar para home.html
