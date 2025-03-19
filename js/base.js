@@ -18,7 +18,7 @@ function obterUsuario() {
 
 validarUsuarioAutenticado();
 
-function validarUsuarioAutenticado() {
+ function validarUsuarioAutenticado() {
   let logado = usuarioEstaAutenticado();
 
   if (window.location.pathname == "/login.html") {
