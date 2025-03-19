@@ -1,5 +1,15 @@
+let clientes = document.getElementById('clientes')
 
-function obterclientes(){
+clientes.addEventListener('click', function(){
+    window.location.href = 'controle-clientes.html'
+})
+
+
+
+
+
+
+/*function obterclientes(){
     fetch('http://localhost:3400/clientes', {
         method: "GET",
         headers: {
@@ -12,4 +22,5 @@ function obterclientes(){
     })
 }
 
-obterclientes()
+obterclientes()*/
+
