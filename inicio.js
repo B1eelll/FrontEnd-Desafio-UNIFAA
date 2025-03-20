@@ -1,9 +1,5 @@
 let clientes = document.getElementById('clientes')
 
-clientes.addEventListener('click', function(){
-    window.location.href = 'controle-clientes.html'
-})
-
 
 
 
