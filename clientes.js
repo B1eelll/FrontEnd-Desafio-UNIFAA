@@ -54,9 +54,6 @@ function limparCamposModal() {
 function obterClientes() {
   fetch(URL_API + "/clientes", {
     method: "GET",
-    headers: {
-      authorization: obterToken(),
-    },
   }) // Faz a requisição para a URL da API
     .then((response) => response.json()) // Converte a resposta para JSON
     .then((clientes) => {
@@ -127,10 +124,6 @@ function obterClienteDoModal() {
 function adicionarClienteNoBackEnd(cliente) {
   fetch(URL_API + "/clientes", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: obterToken(),
-    },
     body: JSON.stringify(cliente),
   })
     .then((response) => response.json())
@@ -187,9 +180,6 @@ function excluirCliente(id) {
 function excluirClienteNoBackEnd(id) {
   fetch(URL_API + "/clientes/" + id, {
     method: "DELETE",
-    headers: {
-      Authorization: obterToken(),
-    },
   }).then(() => {
     removerClienteDaLista(id);
     popularTabela(listaClientes);
@@ -222,10 +212,6 @@ function atualizarCamposModal(cliente) {
 function atualizarClienteNoBackEnd(cliente){
   fetch(URL_API + "/clientes/" + cliente.id, {
     method: "PUT",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: obterToken(),
-    },
     body: JSON.stringify(cliente),
   })
     .then((response) => response.json())
