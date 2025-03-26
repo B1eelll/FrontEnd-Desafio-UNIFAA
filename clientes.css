@@ -1,0 +1,17 @@
+#title{
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px solid rgb(0, 96, 205);
+    border-radius: 10px;
+    color: black;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+    background-image: linear-gradient(to left, blue, rgb(5, 8, 190), rgb(0, 204, 255));
+}
+#btn-adicionar{
+margin-bottom: 10px;
+border: 1px solid white;
+}
