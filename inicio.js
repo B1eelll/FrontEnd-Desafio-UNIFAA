@@ -3,8 +3,11 @@ clientes.addEventListener('click' , function(){
     window.location.href = 'clientes.html';
 })
 
+const logout = document.getElementById('logout').addEventListener('click', function(){
+    localStorage.removeItem('token');
+})
 
-
+obtertoken()
 
 
 /*function obterclientes(){

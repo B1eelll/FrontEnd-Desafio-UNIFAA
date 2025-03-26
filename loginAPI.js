@@ -9,8 +9,6 @@ btnentrar.addEventListener("click", function() {
   fazerlogin(email, senha);
 });
 
-function obtertoken
-
 function fazerlogin(email, senha) {
   // função começa aqui
   fetch("http://localhost:3400/login", {
@@ -31,15 +29,18 @@ function fazerlogin(email, senha) {
       }
     })
     .then((dados) => {
+      const token = dados.token;
+      localStorage.setItem("token", token);
+      obtertoken()
       loading.style.display = "flex";
       login.style.display = "none";
       setTimeout(function () {
         window.location.href = "inicio.html";
-      }, 2000);
+      }, 2000);;
     })
 
     .catch((erro) => {
-      window.alert("Campos inválidos");
+      window.alert("Erro ao fazer login");
     });
 } // função termina aqui
 
@@ -57,3 +58,4 @@ if (btnentrar) {
   btnentrar.addEventListener("mouseleave", sair);
 }
 
+obtertoken()

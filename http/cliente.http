@@ -1,8 +1,8 @@
+
 ### Obter todos os clientes
 GET  http://localhost:3400/clientes
 Content-Type: application/json
-Authorization: 831bf8edf85dffd5326b5a5934de600f
-
+Authorization: 55849547068529f60fba43b1066dfc7f
 
 ### Obter o cliente por id
 GET  http://localhost:3400/clientes/1
