@@ -9,6 +9,8 @@ btnentrar.addEventListener("click", function() {
   fazerlogin(email, senha);
 });
 
+function obtertoken
+
 function fazerlogin(email, senha) {
   // função começa aqui
   fetch("http://localhost:3400/login", {
