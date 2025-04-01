@@ -1,6 +1,6 @@
-let clientes = document.getElementById('clientes')
-clientes.addEventListener('click' , function(){
-    window.location.href = 'clientes.html';
+let clientes = document.getElementById('clientes') 
+clientes.addEventListener('click',function(){
+    window.location.href = "clientes.html";
 })
 
 const logout = document.getElementById('logout').addEventListener('click', function(){

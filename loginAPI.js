@@ -30,8 +30,6 @@ function fazerlogin(email, senha) {
     })
     .then((dados) => {
       const token = dados.token;
-      localStorage.setItem("token", token);
-      obtertoken()
       loading.style.display = "flex";
       login.style.display = "none";
       setTimeout(function () {
@@ -58,4 +56,3 @@ if (btnentrar) {
   btnentrar.addEventListener("mouseleave", sair);
 }
 
-obtertoken()
