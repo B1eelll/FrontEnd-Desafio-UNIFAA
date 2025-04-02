@@ -1,11 +1,8 @@
-let Clientes = document.getElementById("clientes") 
-Clientes.addEventListener('click',function(){
-    window.location.href = "clientes.html";
-})
-let Produto = document.getElementById("produtos")
-Produto.addEventListener('click',function(){
-  window.location.href = "produtos.html";
-});
+
+
+
+
+
 
 const Logout = document.getElementById('logout').addEventListener('click', function(){
     localStorage.removeItem('token');
@@ -27,20 +24,3 @@ function salvarToken(token) {
   }
   salvarToken(token)
   obterToken()
-
-
-/*function obterclientes(){
-    fetch('http://localhost:3400/clientes', {
-        method: "GET",
-        headers: {
-            "authorization": "8ada0eccb3a9dc34c5316bfb97dccfbf"
-        }
-    })
-    .then(response => response.json())
-    .then(clientes => {
-        console.log(clientes);
-    })
-}
-
-obterclientes()*/
-

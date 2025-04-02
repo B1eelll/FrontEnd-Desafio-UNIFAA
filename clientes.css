@@ -1,3 +1,4 @@
+
 #title{
     background-color: rgb(255, 255, 255);
     text-align: center;
@@ -14,4 +15,20 @@ body{
 #btn-adicionar{
 margin-bottom: 10px;
 border: 1px solid white;
+margin-top: 20px;
+}
+#tituloc{
+    margin-top: 30px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    height: 50%;
+    align-content: center;
+    width: 250px;
+    justify-content: center;
+    color: black;
+    border: 1px solid black;
+    border-radius: 7px;
+}
+th{
+    text-align: center;
 }
