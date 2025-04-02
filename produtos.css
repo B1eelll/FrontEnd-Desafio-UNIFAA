@@ -1,0 +1,13 @@
+body{
+    background-image: linear-gradient(to left, rgb(0, 54, 233), rgb(0, 217, 255));
+}
+#alerta{
+    margin-top: 10px;
+    text-align: center;
+}
+#produtos-container{
+    background-color: white;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 10px;
+}
