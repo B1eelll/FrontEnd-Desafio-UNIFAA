@@ -1,11 +1,11 @@
 buscarProdutos()
 const produtosContainer = document.getElementById("produtos-container");
-const formularioadicao = document.getElementById('form-adicionar-produto')
+let formularioadicao = document.getElementById('form-adicionar-produto')
 const btnadicionar = document.getElementById('btn-adicionar')
 const btnCancelarAdicao = document.getElementById('btnCancelarAdicao')
 
 
-  formularioadicao.style.display = 'none';
+  formularioadicao.style.display = 'none'
 
 
 
