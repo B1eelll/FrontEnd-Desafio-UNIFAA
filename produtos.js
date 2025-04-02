@@ -1,5 +1,9 @@
 const produtosContainer = document.getElementById("produtos-container");
 
+function excluirproduto(){
+    //faça isso!
+}
+
 function obterToken() {
   return localStorage.getItem("token") || "";
 }
@@ -37,7 +41,9 @@ function exibirprodutos(produtos) {
       const dataCadastroProduto = document.createElement("p");
       dataCadastroProduto.textContent = `Cadastro: ${formatarData(
         produto.dataCadastro
-      )}`; // Assumindo uma função formatarData
+      )}`
+      
+
 
       produtoDiv.appendChild(idProduto);
       produtoDiv.appendChild(nomeProduto);

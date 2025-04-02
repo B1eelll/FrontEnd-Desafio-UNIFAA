@@ -11,3 +11,9 @@ body{
     border: 3px solid black;
     border-radius: 10px;
 }
+h1{
+    color: black;
+}
+#btn-excluir{
+    margin-bottom: 10px;
+}
