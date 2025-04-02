@@ -17,3 +17,9 @@ h1{
 #btn-excluir{
     margin-bottom: 10px;
 }
+#btn-adicionar{
+    margin-bottom: 10px;
+}   
+form{
+    display: none   ;
+}

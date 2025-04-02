@@ -1,7 +1,64 @@
+buscarProdutos()
 const produtosContainer = document.getElementById("produtos-container");
+const formularioadicao = document.getElementById('form-adicionar-produto')
+const btnadicionar = document.getElementById('btn-adicionar')
+const btnCancelarAdicao = document.getElementById('btnCancelarAdicao')
+
+
+  formularioadicao.style.display = 'none';
+
+
+
+function adicionarformulario(){
+  formularioadicao.style.display = 'block'
+}
+
+function removerProdutoDaTela(id) {
+  const produtoDiv = document.querySelector(`[data-produto-id="${id}"]`);
+  if (produtoDiv && produtosContainer) {
+      produtosContainer.removeChild(produtoDiv);
+  } else {
+      console.warn(`Elemento do produto com ID ${id} não encontrado na tela.`);
+      // Se a exclusão foi bem-sucedida no backend, você pode querer recarregar a lista
+      buscarProdutos(); // Se você tiver uma função para buscar todos os produtos
+  }} 
 
 function excluirproduto(){
-    //faça isso!
+    const btnexcluir = document.getElementById("btn-excluir");
+    btnexcluir.addEventListener('click', function(){
+    let idExcluir = prompt('qual produto deseja excluir? digite o ID.');
+
+    if (idExcluir && idExcluir.trim() !== "") {
+      const token = obterToken();
+      const apiUrl = `http://localhost:3400/produtos/${idExcluir.trim()}`;
+
+      fetch(apiUrl, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json',
+            'authorization': token // Inclua o token se a exclusão for protegida
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            console.log(`Produto com ID ${idExcluir} excluído com sucesso.`);
+            removerProdutoDaTela(idExcluir.trim()); // Remove o produto da tela
+            alert(`Produto com ID ${idExcluir} excluído.`);
+        } else {
+            console.error(`Erro ao excluir produto com ID ${idExcluir}: ${response.status}`);
+            alert(`Erro ao excluir o produto (código ${response.status}).`);
+        }
+    })
+    .catch(error => {
+        console.error(`Erro ao excluir produto com ID ${idExcluir}:`, error);
+        alert('Ocorreu um erro ao tentar excluir o produto.');
+    });
+} else if (idExcluir === null) {
+    console.log('Exclusão cancelada pelo usuário.');
+} else {
+    alert('Por favor, digite um ID válido para excluir.');
+}
+});
 }
 
 function obterToken() {
@@ -42,6 +99,8 @@ function exibirprodutos(produtos) {
       dataCadastroProduto.textContent = `Cadastro: ${formatarData(
         produto.dataCadastro
       )}`
+
+     
       
 
 
@@ -93,4 +152,51 @@ function buscarProdutos() {
       console.log("erro ao buscar produtos", error);
     });
 }
-buscarProdutos();
+
+
+function adicionarNovoProduto(event) {
+  event.preventDefault(); // Evita o envio padrão do formulário
+
+  const nome = document.getElementById('nome').value;
+  const valor = parseFloat(document.getElementById('valor').value);
+  const quantidadeEstoque = parseInt(document.getElementById('quantidadeEstoque').value);
+  const observacao = document.getElementById('observacao').value;
+
+  const novoProduto = { nome, valor, quantidadeEstoque, observacao };
+  const token = obterToken();
+  const apiUrl = "http://localhost:3400/produtos";
+
+  fetch(apiUrl, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'authorization': token },
+    body: JSON.stringify(novoProduto)
+  })
+  .then(response => response.json())
+  .then(novoProdutoAdicionado => {
+    console.log('Produto adicionado:', novoProdutoAdicionado);
+    exibirprodutos(novoProdutoAdicionado); // Função para exibir o novo produto na lista
+    formularioadicao.style.display = 'none'; // Oculta o formulário
+    formularioadicao.reset(); // Limpa o formulário
+    obterToken()
+  })
+  .catch(error => console.error('Erro ao adicionar produto:', error));
+}
+
+
+// Event listener para mostrar o formulário ao clicar em "adicionar"
+btnadicionar.addEventListener('click', function() {
+  formularioadicao.style.display = 'block';
+});
+
+// Event listener para o envio do formulário de adição
+formularioadicao.addEventListener('submit', adicionarNovoProduto);
+
+// Event listener para cancelar a adição e ocultar o formulário
+btnCancelarAdicao.addEventListener('click', function() {
+ formularioadicao.style.display = 'none';
+  formularioadicao.reset();
+});
+
+
+buscarProdutos()
+excluirproduto()

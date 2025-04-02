@@ -11,16 +11,39 @@
 <body>
     <div class="container">
         <div class="alert alert-info" id="alerta"> <strong>Success!</strong> Você está na página de produtos.</div>
+        <div id="pagina">
   <h1>Confira os produtos:</h1>
   <button type="button" class="btn btn-danger" id="btn-excluir">EXCLUIR</button>
+  <button type="button" class="btn btn-success" id="btn-adicionar">ADICIONAR</button>
     <section id="section">
         <div id="produtos-container">
-
-        </div>
+     
     </section>
-
+    <form id="form-adicionar-produto">
     </div>
-    
+        <h2>Adicionar Novo Produto</h2>
+      <div>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+      </div>
+      <div>
+        <label for="valor">Valor:</label>
+        <input type="number" id="valor" name="valor" step="0.01" required>
+      </div>
+      <div>
+        <label for="quantidadeEstoque">Quantidade em Estoque:</label>
+        <input type="number" id="quantidadeEstoque" name="quantidadeEstoque" required>
+      </div>
+      <div>
+        <label for="observacao">Observação:</label>
+        <textarea id="observacao" name="observacao"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" id="adicionarproduto">Adicionar Produto</button>
+      <button id="btnCancelarAdicao" class="btn btn-danger"> Cancelar</button>
+    </form>
+    </div>
+    </div>
+    </div>
 
 
     <script src="base.js"></script>
