@@ -20,9 +20,36 @@ h1{
 #btn-adicionar{
     margin-bottom: 10px;
 } 
-#formulario{
-    background-color: white;
+#formulario1{
+    background-color: rgb(207, 250, 151);
     border: 2px solid black;
     text-align: center;
     width: 500px;
+   width: 1115px;
+   border: 3px solid black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+label{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+input{
+    margin: 3px;
+}
+#nome{
+    width: 300px;
+}
+#valor{
+    width: 100px;
+}
+#quantidadeEstoque{
+    width: 100px;
+}
+#observacao{
+    height: 100px;
+    width: 500px;
+}
+button{ 
+    margin: 10px;
 }

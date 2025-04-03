@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="produtos.css">
 </head>
 <body>
+  
     <div class="container">
         <div class="alert alert-info" id="alerta"> <strong>Success!</strong> Você está na página de produtos.</div>
         <div id="pagina">
@@ -18,24 +19,25 @@
     <section id="section">
         <div id="produtos-container">
     </section>
+    <div id= geral >
     <form id="form-adicionar-produto">
     </div>
-    <div id="formulario">
+    <div id="formulario1">
         <h2>Adicionar Novo Produto</h2>
       <div>
-        <label for="nome">Nome:</label>
+        <label for="nome" id="nomen">Nome:</label>
         <input type="text" id="nome" name="nome" required>
       </div>
       <div>
-        <label for="valor">Valor:</label>
+        <label for="valor" id="valorn">Valor:</label>
         <input type="number" id="valor" name="valor" step="0.01" required>
       </div>
       <div>
-        <label for="quantidadeEstoque">Quantidade em Estoque:</label>
+        <label for="quantidadeEstoque" id="qtn">Quantidade em Estoque:</label>
         <input type="number" id="quantidadeEstoque" name="quantidadeEstoque" required>
       </div>
       <div>
-        <label for="observacao">Observação:</label>
+        <label for="observacao" >Observação:</label>
         <textarea id="observacao" name="observacao"></textarea>
       </div>
       <button type="submit" class="btn btn-primary" id="adicionarproduto">Adicionar Produto</button>
@@ -43,6 +45,8 @@
     </form>
     </div>
   </div>
+</div>
+</div>
     <script src="base.js"></script>
     <script src="produtos.js"></script>
 </body>
